@@ -1,28 +1,29 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Sections from './components/Sections';
+import GridSections from './components/GridSections';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+    <div className="min-h-screen bg-neutral-950 text-white">
+      <Navbar />
+      <Hero />
+      <Sections />
+      <GridSections />
+      <div id="register" className="bg-neutral-950/95 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-semibold">Ready to join Shreshta '26?</h2>
+          <p className="mt-2 text-neutral-300">Secure your spot and be part of the Year of the Innovator.</p>
+          <a
+            href="#"
+            className="mt-6 inline-block rounded-full bg-[#B92525] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_0_0_rgba(212,175,55,0)] hover:shadow-[0_0_24px_6px_rgba(212,175,55,0.35)] transition-shadow"
           >
-            Count is {count}
-          </button>
+            Register Now
+          </a>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
